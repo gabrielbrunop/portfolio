@@ -13,7 +13,7 @@ export default function Navigation() {
   const goTo = (href: string) => () => router.push(`#${href}`);
 
   return (
-    <div className="w-full flex flex-row justify-between">
+    <div className="w-full flex flex-row justify-between [&>*]:select-none">
       <NavigationMenu className="flex flex-row gap-6 text-slate-400 [&>*]:cursor-pointer">
         <NavigationMenuLink onClick={goTo("tecnologias")}>Tecnologias</NavigationMenuLink>
         <NavigationMenuLink onClick={goTo("projetos")}>Projetos</NavigationMenuLink>
