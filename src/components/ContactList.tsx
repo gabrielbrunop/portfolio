@@ -40,7 +40,7 @@ export default function ContactList() {
         projects.map(p =>
           <Card className="bg-slate-950 border-slate-800">
             <CardHeader className="flex flex-row gap-4 items-center">
-              {p.icon({ color: "#cccccc", className: "h-8 w-8 sm:h-12 sm:w-12" })}
+              {p.icon({ color: "#cccccc", className: "h-8 w-8 sm:h-10 sm:w-10" })}
               <CardTitle className="text-blue-400 text-lg sm:text-2xl">
                 <Link href={p.link}>{p.username}</Link>
               </CardTitle>
