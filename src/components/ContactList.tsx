@@ -38,14 +38,14 @@ export default function ContactList() {
     <div className="flex flex-row gap-4 md:gap-8 flex-wrap">
       {
         projects.map(p =>
-          <Card className="bg-slate-950 border-slate-800">
+          <Card className="bg-transparent border-slate-800">
             <CardHeader className="flex flex-row gap-4 items-center">
               {p.icon({ color: "#cccccc", className: "h-8 w-8 sm:h-10 sm:w-10" })}
               <CardTitle className="text-blue-400 text-lg sm:text-2xl">
                 <Link href={p.link}>{p.username}</Link>
               </CardTitle>
             </CardHeader>
-          </Card>  
+          </Card>
         )
       }
     </div>

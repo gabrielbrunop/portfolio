@@ -16,7 +16,7 @@ type Props = Readonly<{
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className + " bg-slate-950"}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
