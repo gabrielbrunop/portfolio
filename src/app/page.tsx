@@ -19,8 +19,8 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <h1 className="text-5xl sm:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-slate-400 to-slate-500 font-sans font-bold">
               Gabriel Bruno
-              <span className="text-3xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-b from-slate-800 to-slate-600 font-sans font-bold">
-                .dev
+              <span className="text-2xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-slate-800 to-slate-600 font-sans font-bold">
+                .com.br
               </span>
             </h1>
             <h2 className="text-4xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-b from-slate-500 to-slate-600 font-sans font-bold">
