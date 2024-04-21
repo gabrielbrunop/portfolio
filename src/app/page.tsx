@@ -13,7 +13,7 @@ export default function Home() {
       <div className="flex flex-row px-[12%] sm:px-[20%] py-12">
         <Navigation />
       </div>
-      <main className="flex flex-col gap-16 px-[12%] sm:px-[20%] py-12 antialiased pb-32">
+      <main className="flex flex-col gap-16 px-[8%] sm:px-[20%] py-12 antialiased pb-32">
         <section className="flex flex-col gap-8">
           <p className="font-medium text-xl sm:text-2xl text-indigo-400">Olá, meu nome é</p>
           <div className="flex flex-col gap-2">
