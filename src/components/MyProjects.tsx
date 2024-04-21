@@ -14,13 +14,19 @@ const projects: Project[] = [
     name: "estechboard",
     site: "https://estechnews.vercel.app/",
     github: "https://github.com/gabrielbrunop/estechnews",
-    description: "Um pequeno fórum de discussões e compartilhamento de notícias feito em Next.js, inspirado no Reddit e no agregador de notícias Hacker News."
+    description: "Um pequeno fórum de discussões e compartilhamento de notícias feito em Next.js, inspirado no Reddit e no agregador de notícias Hacker News.",
+  },
+  {
+    name: "gabrielbruno.com.br",
+    site: "https://gabrielbruno.com.br/",
+    github: "https://github.com/gabrielbrunop/portfolio",
+    description: "Portfólio pessoal feito em Next.js, com um design minimalista e responsivo.",
   }
 ];
 
 export default function MyProjects() {
   return (
-    <div>
+    <div className="flex flex-col gap-8">
       {
         projects.map(p =>
           <Card className="bg-slate-900 border-slate-800">
@@ -36,7 +42,7 @@ export default function MyProjects() {
             <CardContent>
               <p className="text-slate-400">{p.description}</p>
             </CardContent>
-          </Card>  
+          </Card>
         )
       }
     </div>
