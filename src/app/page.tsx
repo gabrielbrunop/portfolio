@@ -6,6 +6,9 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
 import SectionScroll from "@/components/SectionScroll";
 import ContactList from "@/components/ContactList";
+import dynamic from 'next/dynamic';
+
+const InterestGraph = dynamic(() => import('@/components/InterestGraph'), { ssr: false });
 
 export default function Home() {
   return (
@@ -61,6 +64,14 @@ export default function Home() {
           <SectionScroll sectionName="projetos" />
           <h2 className="font-bold text-2xl sm:text-3xl text-slate-500">Meus projetos</h2>
           <MyProjects />
+        </section>
+        <section className="flex flex-col px-[8%] sm:px-[20%] gap-12">
+          <SectionScroll sectionName="interesses" />
+          <h2 className="font-bold text-2xl sm:text-3xl text-slate-500">Interesses</h2>
+          <p className="text-lg sm:text-xl text-slate-400">
+            Gosto de explorar até mesmo os mais esotéricos ramos da computação. Aqui está um grafo de alguns dos meus interesses.
+          </p>
+          <InterestGraph />
         </section>
         <section className="flex flex-col px-[8%] sm:px-[20%] gap-12">
           <SectionScroll sectionName="contato" />
