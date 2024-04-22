@@ -3,6 +3,8 @@
 import { GraphCanvas, Theme, darkTheme } from 'reagraph';
 import { Card, CardContent } from './ui/card';
 import { Relation, getEdgesFromRelations, getNodesFromRelations } from '@/lib/relations';
+import { useState } from 'react';
+import { FaInfoCircle } from "react-icons/fa";
 
 const relations = [
   { source: 'Computer Science', target: 'Web Development' },
@@ -49,10 +51,21 @@ const theme = {
 } satisfies Theme;
 
 export default function InterestGraph() {
+  const [hasBeenDragged, setHasBeenDragged] = useState(false);
+
   return (
     <div className="flex flex-col justify-center items-center">
       <Card className="bg-slate-900 border-slate-800 w-full h-[32em] flex flex-col items-center justify-center">
-        <CardContent className="relative w-[99%] h-[99%] flex">
+        <CardContent
+          className="relative w-[99%] h-[99%] flex"
+          onMouseDown={() => setHasBeenDragged(true)}
+          onTouchStart={() => setHasBeenDragged(true)}
+        >
+          {!hasBeenDragged &&
+            <Card className="bg-slate-800 border-slate-600 h-fit z-10 w-[60%] sm:w-[30%] absolute right-2 sm:top-2 bottom-2 text-gray-300 px-4 py-3 align-middle text-center select-none">
+              <p className="align-middle text-center [&>*]:inline"><FaInfoCircle /> Arraste para mover o gráfico.</p>
+            </Card>
+          }
           <GraphCanvas
             maxDistance={1700}
             sizingType="centrality"
@@ -62,6 +75,6 @@ export default function InterestGraph() {
           />
         </CardContent>
       </Card>
-    </div>
+    </div >
   );
 }
