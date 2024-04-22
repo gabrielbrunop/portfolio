@@ -1,20 +1,21 @@
-import MyProjects from "@/components/MyProjects";
-import Navigation from "@/components/Navigation";
-import TechCarousel from "@/components/TechCarousel";
+import dynamic from 'next/dynamic';
 import { getAge } from "@/lib/utils";
+import Navigation from "@/components/Navigation";
+import MyProjects from "@/components/MyProjects";
+import TechCarousel from "@/components/TechCarousel";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { HiMiniRocketLaunch } from "react-icons/hi2";
 import SectionScroll from "@/components/SectionScroll";
 import ContactList from "@/components/ContactList";
-import dynamic from 'next/dynamic';
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 const InterestGraph = dynamic(() => import('@/components/InterestGraph'), {
   ssr: false,
   loading: () =>
     <div className="flex flex-col justify-center items-center">
       <Card className="bg-slate-900 border-slate-800 w-full h-[32em] flex flex-col items-center justify-center animate-pulse">
-        <CardContent className="relative w-[99%] h-[99%] flex" />
+        <LoadingSpinner />
       </Card>
     </div>
 });
