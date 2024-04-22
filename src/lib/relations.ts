@@ -13,7 +13,7 @@ export const getNodesFromRelations = (relations: Relation[]): Node[] =>
 
 export const getEdgesFromRelations = (
   relations: Relation[],
-  nodes: Node[],
+  nodes: Node[]
 ): Edge[] =>
   relations
     .map(({ source, target }) => ({

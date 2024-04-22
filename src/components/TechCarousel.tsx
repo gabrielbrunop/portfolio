@@ -1,6 +1,6 @@
 "use client"
 
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -18,7 +18,7 @@ export default function TechCarousel() {
   return (
     <Carousel className="w-full" opts={{ loop: true, align: "start" }} plugins={[Autoplay({ delay: 1000 })]}>
       <CarouselContent className="items-center">
-        {techs.map(({name, src}, i) =>
+        {techs.map(({ name, src }, i) =>
           <CarouselItem key={i} className="basis-1/3 lg:basis-1/5 md:basis-1/4">
             <div className="flex items-center justify-center">
               <Image src={src} alt={`Logo do ${name}`} width={100} height={144} className="rounded-lg select-none" />

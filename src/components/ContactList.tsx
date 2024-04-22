@@ -1,6 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { LinkBadge } from "./LinkBadge";
 import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { IconType } from "react-icons";
