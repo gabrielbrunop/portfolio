@@ -16,7 +16,7 @@ export default function Home() {
       <div className="flex flex-row px-[12%] sm:px-[20%] py-12">
         <Navigation />
       </div>
-      <main className="flex flex-col gap-16 py-12 antialiased pb-32">
+      <main className="flex flex-col gap-12 py-12 antialiased pb-32">
         <section className="flex flex-col px-[8%] sm:px-[20%] gap-8">
           <p className="font-medium text-xl sm:text-2xl text-indigo-400">Olá, meu nome é</p>
           <div className="flex flex-col gap-2">
@@ -35,7 +35,7 @@ export default function Home() {
             Computação é a minha paixão.
           </p>
         </section>
-        <section className="flex flex-col gap-24">
+        <section className="flex flex-col gap-12">
           <SectionScroll sectionName="tecnologias" />
           <div className="flex flex-col gap-12">
             <div className="px-[8%] sm:px-[20%]">
@@ -45,7 +45,7 @@ export default function Home() {
               <TechCarousel />
             </div>
           </div>
-          <div className="px-[8%] sm:px-[20%]">
+          <div className="px-[8%] sm:px-[20%] pt-12">
             <Alert className="bg-slate-900 border-slate-900">
               <AlertTitle className="flex flex-row gap-2 text-lg text-slate-300">
                 <HiMiniRocketLaunch color="#cccccc" className="text-4xl h-8 w-6" />
@@ -69,7 +69,7 @@ export default function Home() {
           <SectionScroll sectionName="interesses" />
           <h2 className="font-bold text-2xl sm:text-3xl text-slate-500">Interesses</h2>
           <p className="text-lg sm:text-xl text-slate-400">
-            Gosto de explorar até mesmo os mais esotéricos ramos da computação. Aqui está um grafo de alguns dos meus interesses.
+            Gosto de explorar até mesmo os mais esotéricos ramos da computação!
           </p>
           <InterestGraph />
         </section>
