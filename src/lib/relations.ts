@@ -11,6 +11,9 @@ export const getRelationsNames = (relations: Relation[]) =>
 export const getNodesFromRelations = (relations: Relation[]): Node[] =>
   getRelationsNames(relations).map((e, i) => ({ id: String(i), label: e }));
 
+export const generateIdFromRelation = (relation: Relation) =>
+  `${relation.source}-${relation.target}`;
+
 export const getEdgesFromRelations = (
   relations: Relation[],
   nodes: Node[]
@@ -20,4 +23,4 @@ export const getEdgesFromRelations = (
       source: nodes.find((n) => n.label === source)!.id,
       target: nodes.find((n) => n.label === target)!.id,
     }))
-    .map((e) => ({ ...e, id: `${e.source}-${e.target}` }));
+    .map((e) => ({ ...e, id: generateIdFromRelation(e) }));
