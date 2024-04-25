@@ -9,6 +9,7 @@ import SectionScroll from "@/components/SectionScroll";
 import ContactList from "@/components/ContactList";
 import { Card } from "@/components/ui/card";
 import LoadingSpinner from "@/components/LoadingSpinner";
+import StepProgressBar from '@/components/StepProgressBar';
 
 const InterestGraph = dynamic(() => import('@/components/InterestGraph'), {
   ssr: false,
@@ -23,11 +24,13 @@ const InterestGraph = dynamic(() => import('@/components/InterestGraph'), {
 export default function Home() {
   return (
     <>
+      <StepProgressBar />
       <div className="flex flex-row px-[12%] sm:px-[20%] py-12">
         <Navigation />
       </div>
       <main className="flex flex-col gap-12 py-12 antialiased pb-32">
         <section className="flex flex-col px-[8%] sm:px-[20%] gap-8">
+          <SectionScroll sectionName="apresentacao" />
           <p className="font-medium text-xl sm:text-2xl text-indigo-400">Olá, meu nome é</p>
           <div className="flex flex-col gap-2">
             <h1 className="text-5xl sm:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-slate-400 to-slate-500 font-sans font-bold">
