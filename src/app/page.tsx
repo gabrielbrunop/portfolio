@@ -10,6 +10,7 @@ import ContactList from "@/components/ContactList";
 import { Card } from "@/components/ui/card";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import StepProgressBar from '@/components/StepProgressBar';
+import JobExperiences from '@/components/JobExperiences';
 
 const InterestGraph = dynamic(() => import('@/components/InterestGraph'), {
   ssr: false,
@@ -72,6 +73,11 @@ export default function Home() {
               </AlertDescription>
             </Alert>
           </div>
+        </section>
+        <section className="flex flex-col px-[8%] sm:px-[20%] gap-12">
+          <SectionScroll sectionName="experiencia" />
+          <h2 className="font-bold text-2xl sm:text-3xl text-slate-500">Experiência profissional</h2>
+          <JobExperiences />
         </section>
         <section className="flex flex-col px-[8%] sm:px-[20%] gap-12">
           <SectionScroll sectionName="projetos" />
