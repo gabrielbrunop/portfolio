@@ -69,7 +69,7 @@ export default function StepProgressBar() {
       </div>
       <div className="h-[65%] w-[100%] flex flex-col items-center justify-between absolute px-24">
         {sections.map((s, i) => (
-          <div className="w-12 h-12 text-slate-400 flex justify-center items-center z-20">
+          <div key={i} className="w-12 h-12 text-slate-400 flex justify-center items-center z-20">
             {
               <s.icon
                 onClick={goTo(s.title)}

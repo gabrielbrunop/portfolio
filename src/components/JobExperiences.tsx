@@ -25,8 +25,8 @@ const jobExperiences = [
 export default function JobExperiences() {
   return (
     <div className="flex flex-col gap-8">
-      {jobExperiences.map((p) => (
-        <Card className="bg-slate-900 border-slate-800">
+      {jobExperiences.map((p, i) => (
+        <Card key={i} className="bg-slate-900 border-slate-800">
           <CardHeader className="flex flex-col gap-1">
             <Link href={p.link}>
               <CardTitle className="text-blue-400 pt-2 pb-1">
