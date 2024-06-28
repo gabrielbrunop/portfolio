@@ -22,7 +22,6 @@ const relations = [
   { source: "Lisp", target: "Common Lisp" },
   { source: "React", target: "Next.js" },
   { source: "Web Development", target: "TypeScript" },
-  { source: "Web Development", target: "TypeScript" },
   { source: "Relational Databases", target: "PostgreSQL" },
   { source: "Databases", target: "Relational Databases" },
   { source: "Computer Science", target: "Databases" },
