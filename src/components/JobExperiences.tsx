@@ -33,14 +33,14 @@ export default function JobExperiences() {
                 {p.company}
               </CardTitle>
             </Link>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row gap-2 flex-wrap">
               {p.titles.map((title) => (
                 <Badge className="bg-slate-300 text-black hover:bg-slate-400">
                   {title}
                 </Badge>
               ))}
             </div>
-            <div className="flex flex-row gap-2">
+            <div className="flex flex-row gap-2 flex-wrap">
               {p.technologies.map((tech) => (
                 <Badge className="bg-blue-400 text-black hover:bg-blue-600">
                   {tech}
